@@ -1,5 +1,6 @@
 package work;
 
+import common.Cellworld;
 import common.Utils;
 
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,8 @@ public class Admin extends javax.servlet.http.HttpServlet {
         response.setContentType("text/plain;charset=UTF-8;pageEncoding=UTF-8");
         String result = "Matrix";
         /* mission detail */
-        result = Utils.get_JSON();
+//        result = Utils.get_JSON()
+        result = Cellworld.Next_JSON();
         /* end */
         PrintWriter out = response.getWriter();
         out.print(result);
