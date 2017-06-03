@@ -12,7 +12,6 @@ public class CellWorld {
 	static int width;
 	int[][] cellWorld;
 	int[][] cellWorldNext;
-	int counter = 0;
 	ArrayList<Point> coordinate;
 	public void initialize(ArrayList<Point> input){
 		coordinate = (ArrayList<Point>)(input.clone());
@@ -21,7 +20,7 @@ public class CellWorld {
 			Point point = coordinate.get(i);
 			int x = point.x;
 			int y = point.y;
-			cellWorld[x][y] = 1;
+			cellWorld[y][x] = 1;
 		}
 	
 	}
@@ -35,7 +34,7 @@ public class CellWorld {
 		int state;
 		for (int i = 0; i < height; i++){
 			for (int j = 0; j < width; j++){
-				state = checkState(i, j);
+				state = checkState(j, i);
 				if (state == 3){
 					cellWorldNext[i][j] = 1;
 				}
@@ -72,7 +71,7 @@ public class CellWorld {
 				if (x==0&&y==0)
 					continue;
 				if (boundCheck(ix, jy)){
-					if (cellWorld[ix][jy] == 1)
+					if (cellWorld[jy][ix] == 1)
 						cellCounter++;
 				}
 					
@@ -121,7 +120,7 @@ public class CellWorld {
 		{
 			for(int j=0;j<newCellWorld.height;j++)
 			{
-				if(newCellWorld.cellWorld[i][j] == 1)
+				if(newCellWorld.cellWorld[j][i] == 1)
 				{
 					System.out.print("*");
 				}else{
