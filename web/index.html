@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <style>
+        .item {
+            background: orange;
+            height: 50px;
+            text-align: center;
+        }
+        .item:nth-child(even) {
+            background: green;
+        }
+        .m-grid{
+            width: 250px;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(5,50px);
+            display: grid;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Thoughtworks</h1>
+<div class="m-grid">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+</div>
+<div class="row">
+    <div class="col-md-12" style="text-align:center">
+        <button>Start</button>
+    </div>
+</div>
+
+
+<script>
+    $(function() {
+//        alert("hello matrix");
+        $(".item").html("hello");
+    });
+</script>
+</body>
+</html>
